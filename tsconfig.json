@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "verbatimModuleSyntax": true,
+    "module": "NodeNext", // Đồng nhất với moduleResolution
+    "moduleResolution": "NodeNext",
+    "target": "es2020",
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"]
+}
