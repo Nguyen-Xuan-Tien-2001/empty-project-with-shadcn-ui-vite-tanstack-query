@@ -4,7 +4,7 @@
 
 # Hướng dẫn chạy và DEV:
 
-1. yarn : Tải các d
+1. yarn : Tải các dependencies
 2. yarn dev : chạy project
 3. npx tailwindcss -i ./src/index.css -o ./src/output.css --watch : chạy tailwind để lắng nghe sự thay đổi css của dự án
 

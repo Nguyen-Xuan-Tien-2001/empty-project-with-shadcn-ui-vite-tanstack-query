@@ -1,10 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import { LoginPage } from "./pages/Login.js";
-import React from "react";
 import App from "./App.js";
 import { AuthControl } from "./pages/AuthControl.js";
 import UnauthorizedPage from "./pages/UnauthorizedPage.js";
-import { HomePage } from "./pages/Home.js";
+import LoginPage from "./pages/Login.js";
+import { TableContent } from "./components/contents/Table.js";
 
 const routes = [
   {
@@ -14,16 +13,12 @@ const routes = [
         <App />
       </AuthControl>
     ),
-    handle: { icon: "null", title: "Main" },
+    handle: { icon: "null", title: "Dashboard" },
     children: [
       {
-        path: "/home",
-        element: <HomePage />,
-        handle: { icon: "list-alt-solid", title: "Todo" },
-      },
-      {
-        path: "*",
-        element: <UnauthorizedPage />,
+        path: "/account-manager",
+        element: <TableContent />,
+        handle: { icon: "null", title: "Account Manager" },
       },
     ],
   },
@@ -32,6 +27,10 @@ const routes = [
     element: <LoginPage />,
     handle: { icon: "null", title: "Login" },
     children: [],
+  },
+  {
+    path: "*",
+    element: <UnauthorizedPage />,
   },
 ];
 

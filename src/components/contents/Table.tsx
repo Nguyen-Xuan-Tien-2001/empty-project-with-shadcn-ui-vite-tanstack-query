@@ -55,7 +55,7 @@ const invoices = [
   },
 ];
 
-export function HomePage() {
+export function TableContent() {
   return (
     <Table>
       <TableCaption>A list of your recent invoices.</TableCaption>

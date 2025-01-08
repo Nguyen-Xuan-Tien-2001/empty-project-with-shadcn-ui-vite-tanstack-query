@@ -1,34 +1,35 @@
-import * as React from "react"
+import * as React from "react";
 import {
   AudioWaveform,
   BookOpen,
   Bot,
   Command,
+  FolderGit2,
   Frame,
   GalleryVerticalEnd,
   Map,
   PieChart,
   Settings2,
   SquareTerminal,
-} from "lucide-react"
+} from "lucide-react";
 
-import { NavMain } from "@/components/nav-main.js"
-import { NavProjects } from "@/components/nav-projects.js"
-import { NavUser } from "@/components/nav-user.js"
-import { TeamSwitcher } from "@/components/team-switcher.js"
+import { NavMain } from "@/components/nav-main.js";
+import { NavProjects } from "@/components/nav-projects.js";
+import { NavUser } from "@/components/nav-user.js";
+import { TeamSwitcher } from "@/components/team-switcher.js";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar.js"
+} from "@/components/ui/sidebar.js";
 
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Nguyễn Xuân Tiến",
+    email: "tiennx@hpt.vn",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
@@ -50,64 +51,23 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
-      url: "#",
+      title: "Dashboard",
+      url: "/",
       icon: SquareTerminal,
+    },
+    {
+      title: "Projects",
+      url: "#",
+      icon: FolderGit2,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "Smart Control",
+          url: "/smart-control",
         },
         {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
+          title: "Account Manager",
+          url: "/account-manager",
         },
       ],
     },
@@ -118,19 +78,15 @@ const data = {
       items: [
         {
           title: "General",
-          url: "#",
+          url: "/Setting/General",
         },
         {
           title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
+          url: "/Setting/Team",
         },
         {
           title: "Limits",
-          url: "#",
+          url: "/Setting/Limits",
         },
       ],
     },
@@ -152,7 +108,7 @@ const data = {
       icon: Map,
     },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -169,5 +125,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
-  )
+  );
 }

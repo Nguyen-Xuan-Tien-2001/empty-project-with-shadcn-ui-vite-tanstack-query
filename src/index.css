@@ -8,7 +8,6 @@ body {
   padding: 0; /* Loại bỏ padding mặc định */
   min-width: 100vw; /* Đảm bảo chiếm hết chiều rộng */
   min-height: 100vh; /* Đảm bảo chiếm hết chiều cao */
-  overflow: hidden; /* Ngăn cuộn không mong muốn (tuỳ chọn) */
 }
 #root {
   width: 100vw; /* Đảm bảo chiếm hết chiều rộng */
@@ -21,14 +20,12 @@ body {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 @layer base {
   :root {
@@ -87,7 +84,6 @@ body {
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
@@ -95,4 +91,14 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Active item */
+.active {
+  @apply text-primary font-bold; /* Áp dụng màu primary và chữ in đậm */
+}
+
+/* Pending item */
+.pending {
+  @apply text-gray-400 italic; /* Áp dụng màu xám nhạt và chữ nghiêng */
 }
