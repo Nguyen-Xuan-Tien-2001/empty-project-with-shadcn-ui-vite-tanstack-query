@@ -35,10 +35,10 @@ function App() {
                       )}
                       <BreadcrumbItem className="hidden md:block">
                         {index === matches.length - 1 ? (
-                          <BreadcrumbPage>{item.handle.title}</BreadcrumbPage>
+                          <BreadcrumbPage>{item.handle?.title}</BreadcrumbPage>
                         ) : (
                           <BreadcrumbLink href={item.pathname}>
-                            {item.handle.title}
+                            {item.handle?.title}
                           </BreadcrumbLink>
                         )}
                       </BreadcrumbItem>

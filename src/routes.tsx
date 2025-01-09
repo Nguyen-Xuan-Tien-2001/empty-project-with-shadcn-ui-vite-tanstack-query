@@ -3,7 +3,8 @@ import App from "./App.js";
 import { AuthControl } from "./pages/AuthControl.js";
 import UnauthorizedPage from "./pages/UnauthorizedPage.js";
 import LoginPage from "./pages/Login.js";
-import { TableContent } from "./components/contents/Table.js";
+// import { TableContent } from "./components/contents/Table.js";
+import { AccountManagerTable } from "./components/contents/AccountManagerTable.js";
 
 const routes = [
   {
@@ -17,7 +18,7 @@ const routes = [
     children: [
       {
         path: "/account-manager",
-        element: <TableContent />,
+        element: <AccountManagerTable />,
         handle: { icon: "null", title: "Account Manager" },
       },
     ],
